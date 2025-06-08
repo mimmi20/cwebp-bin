@@ -26,6 +26,8 @@ jobs:
         run: sudo apt-get install libjpeg-dev -y
       - if: contains(matrix.os, 'macos')
         run: brew install jpeg
+      - if: contains(matrix.os, 'macos')
+        run: echo 'export PATH="/opt/homebrew/opt/jpeg/bin:$PATH"' >> /Users/runner/.bash_profile
       - if: contains(matrix.os, 'ubuntu')
         run: sudo apt-get install libpng-dev -y
       - if: contains(matrix.os, 'macos')
