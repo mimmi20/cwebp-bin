@@ -15,7 +15,7 @@
 	},
 	"scripts": {
 		"postinstall": "node lib/install.js",
-		"test": "xo && ava --timeout=180s"
+		"test": "ava --timeout=180s"
 	},
 	"files": [
 		"cli.js",
@@ -37,11 +37,13 @@
 	],
 	"dependencies": {
 		"@localnerve/bin-build": "^7.7.0",
-		"@xhmikosr/bin-wrapper": "^13.0.5"
+		"@xhmikosr/bin-wrapper": "^13.0.5",
+		"bin-version-check": "^5.1.0",
+		"which": "^5.0.0"
 	},
 	"devDependencies": {
-		"ava": "^6.4.0",
 		"@lesjoursfr/bin-check": "^7.1.9",
+		"ava": "^6.4.0",
 		"compare-size": "^3.0.0",
 		"execa": "^9.6.0",
 		"tempy": "^3.0.0",
