@@ -19,7 +19,7 @@ test('rebuild the cwebp binaries', async t => {
 
 	const temporary = temporaryDirectory();
 
-	await binBuild.url('https://downloads.webmproject.org/releases/webp/libwebp-1.5.0.tar.gz', [
+	await binBuild.url('https://storage.googleapis.com/downloads.webmproject.org/releases/webp/libwebp-1.5.0.tar.gz', [
 		`./configure --disable-shared --prefix="${temporary}" --bindir="${temporary}"`,
 		'make && make install',
 	]);
